@@ -7,8 +7,8 @@ class Category {
 
   Category.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    categoryName = json['categoryName'];
-    seoUrl = json['seoUrl'];
+    categoryName = json['categoryName'].toString();
+    seoUrl = json['seoUrl'].toString();
   }
 
   Map<String, dynamic> toJson() {

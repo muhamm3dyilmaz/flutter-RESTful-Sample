@@ -3,7 +3,7 @@ class Product {
   int? categoryId;
   String? productName;
   String? quantityPerUnit;
-  String? unitPrice;
+  double? unitPrice;
   int? unitsInStock;
 
   Product({this.id, this.categoryId, this.productName, this.quantityPerUnit, this.unitPrice, this.unitsInStock});
@@ -13,7 +13,7 @@ class Product {
     categoryId = json['categoryId'];
     productName = json['productName'];
     quantityPerUnit = json['quantityPerUnit'];
-    unitPrice = json['unitPrice'];
+    unitPrice = double.tryParse(json['unitPrice'].toString());
     unitsInStock = json['unitsInStock'];
   }
 
